@@ -1,0 +1,102 @@
+{
+	"folders": {},
+	"connections": {
+		"dbeaver-sample-database-sqlite-1": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "DBeaver Sample Database (SQLite)",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\Users\\etleg\\AppData\\Roaming\\DBeaverData\\workspace6\\.metadata\\sample-database-sqlite-1\\Chinook.db",
+				"url": "jdbc:sqlite:C:\\Users\\etleg\\AppData\\Roaming\\DBeaverData\\workspace6\\.metadata\\sample-database-sqlite-1\\Chinook.db",
+				"type": "dev"
+			}
+		},
+		"mysql8-17e386fb2e6-66f7b06f14a32a38": {
+			"provider": "mysql",
+			"driver": "mysql8",
+			"name": "localhost",
+			"save-password": true,
+			"show-system-objects": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"url": "jdbc:mysql://localhost:3306/",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"mysql8-17e386fb2e6-66f7b06f14a32a38": {
+			"dhwheels": {
+				":autos": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201102351\"><entities><data-source id=\"mysql8-17e386fb2e6-66f7b06f14a32a38\"><entity id=\"1\" name=\"autos\" fq-name=\"dhwheels.autos\" order=\"0\" color-bg=\"255,128,64\" x=\"481\" y=\"9\"><path name=\"dhwheels\"/></entity><entity id=\"2\" name=\"cilindrada\" fq-name=\"dhwheels.cilindrada\" order=\"1\" border-width=\"3\" x=\"320\" y=\"282\"><path name=\"dhwheels\"/></entity><entity id=\"3\" name=\"marcas\" fq-name=\"dhwheels.marcas\" order=\"2\" x=\"851\" y=\"49\"><path name=\"dhwheels\"/></entity><entity id=\"4\" name=\"tipo_combustible\" fq-name=\"dhwheels.tipo_combustible\" order=\"3\" x=\"852\" y=\"211\"><path name=\"dhwheels\"/></entity><entity id=\"5\" name=\"imagenes\" fq-name=\"dhwheels.imagenes\" order=\"4\" x=\"37\" y=\"92\"><path name=\"dhwheels\"/></entity><entity id=\"6\" name=\"usuarios_autos\" fq-name=\"dhwheels.usuarios_autos\" order=\"5\" x=\"717\" y=\"355\"><path name=\"dhwheels\"/></entity><entity id=\"7\" name=\"usuario\" fq-name=\"dhwheels.usuario\" order=\"6\" x=\"468\" y=\"454\"><path name=\"dhwheels\"/></entity></data-source></entities><relations><relation name=\"imagenes_FK\" fq-name=\"dhwheels.imagenes.imagenes_FK\" type=\"fk\" pk-ref=\"1\" fk-ref=\"5\"/><relation name=\"usuarios_autos_FK\" fq-name=\"dhwheels.usuarios_autos.usuarios_autos_FK\" type=\"fk\" pk-ref=\"1\" fk-ref=\"6\"/><relation name=\"CILINDRADA_FK\" fq-name=\"dhwheels.autos.CILINDRADA_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"1\"/><relation name=\"marca_FK\" fq-name=\"dhwheels.autos.marca_FK\" type=\"fk\" pk-ref=\"3\" fk-ref=\"1\"/><relation name=\"modelo_FK\" fq-name=\"dhwheels.autos.modelo_FK\" type=\"fk\" pk-ref=\"4\" fk-ref=\"1\"/><relation name=\"marcas_FK\" fq-name=\"dhwheels.marcas.marcas_FK\" type=\"fk\" pk-ref=\"5\" fk-ref=\"3\"/><relation name=\"user_autos_FK_1\" fq-name=\"dhwheels.usuarios_autos.user_autos_FK_1\" type=\"fk\" pk-ref=\"7\" fk-ref=\"6\"/></relations></diagram>"
+						}
+					}
+				},
+				":usuario": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201100122\"><entities><data-source id=\"mysql8-17e386fb2e6-66f7b06f14a32a38\"><entity id=\"1\" name=\"usuario\" fq-name=\"dhwheels.usuario\" order=\"0\" color-bg=\"255,128,64\" x=\"517\" y=\"45\"><path name=\"dhwheels\"/></entity><entity id=\"2\" name=\"autos\" fq-name=\"dhwheels.autos\" order=\"1\" x=\"847\" y=\"67\"><path name=\"dhwheels\"/></entity><entity id=\"3\" name=\"cilindrada\" fq-name=\"dhwheels.cilindrada\" order=\"2\" x=\"1145\" y=\"156\"><path name=\"dhwheels\"/></entity><entity id=\"4\" name=\"marcas\" fq-name=\"dhwheels.marcas\" order=\"3\" border-width=\"3\" x=\"1151\" y=\"297\"><path name=\"dhwheels\"/></entity><entity id=\"5\" name=\"tipo_combustible\" fq-name=\"dhwheels.tipo_combustible\" order=\"4\" x=\"853\" y=\"394\"><path name=\"dhwheels\"/></entity></data-source></entities><relations><relation name=\"cliente_FK\" fq-name=\"dhwheels.usuario.cliente_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"1\"/><relation name=\"CILINDRADA_FK\" fq-name=\"dhwheels.autos.CILINDRADA_FK\" type=\"fk\" pk-ref=\"3\" fk-ref=\"2\"/><relation name=\"marca_FK\" fq-name=\"dhwheels.autos.marca_FK\" type=\"fk\" pk-ref=\"4\" fk-ref=\"2\"/><relation name=\"modelo_FK\" fq-name=\"dhwheels.autos.modelo_FK\" type=\"fk\" pk-ref=\"5\" fk-ref=\"2\"/></relations></diagram>"
+						}
+					}
+				},
+				":usuarios_autos": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201101428\"><entities><data-source id=\"mysql8-17e386fb2e6-66f7b06f14a32a38\"><entity id=\"1\" name=\"usuarios_autos\" fq-name=\"dhwheels.usuarios_autos\" order=\"0\" color-bg=\"255,128,64\" border-width=\"3\" x=\"5\" y=\"222\"><path name=\"dhwheels\"/></entity><entity id=\"2\" name=\"usuario\" fq-name=\"dhwheels.usuario\" order=\"1\" x=\"185\" y=\"20\"><path name=\"dhwheels\"/></entity><entity id=\"3\" name=\"autos\" fq-name=\"dhwheels.autos\" order=\"2\" x=\"185\" y=\"297\"><path name=\"dhwheels\"/></entity></data-source></entities><relations><relation name=\"user_autos_FK_1\" fq-name=\"dhwheels.usuarios_autos.user_autos_FK_1\" type=\"fk\" pk-ref=\"2\" fk-ref=\"1\"/><relation name=\"usuarios_autos_FK\" fq-name=\"dhwheels.usuarios_autos.usuarios_autos_FK\" type=\"fk\" pk-ref=\"3\" fk-ref=\"1\"/></relations></diagram>"
+						}
+					}
+				},
+				":imagenes": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201101437\"><entities><data-source id=\"mysql8-17e386fb2e6-66f7b06f14a32a38\"><entity id=\"1\" name=\"imagenes\" fq-name=\"dhwheels.imagenes\" order=\"0\" color-bg=\"255,128,64\" border-width=\"3\" x=\"121\" y=\"85\"><path name=\"dhwheels\"/></entity><entity id=\"2\" name=\"autos\" fq-name=\"dhwheels.autos\" order=\"1\" x=\"455\" y=\"33\"><path name=\"dhwheels\"/></entity></data-source></entities><relations><relation name=\"imagenes_FK\" fq-name=\"dhwheels.imagenes.imagenes_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"1\"/></relations></diagram>"
+						}
+					}
+				},
+				":carrito": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201101749\"><entities><data-source id=\"mysql8-17e386fb2e6-66f7b06f14a32a38\"><entity id=\"1\" name=\"carrito\" fq-name=\"dhwheels.carrito\" order=\"0\" color-bg=\"255,128,64\" border-width=\"3\" x=\"922\" y=\"36\"><path name=\"dhwheels\"/></entity><entity id=\"2\" name=\"usuario\" fq-name=\"dhwheels.usuario\" order=\"1\" x=\"634\" y=\"14\"><path name=\"dhwheels\"/></entity><entity id=\"3\" name=\"carrito_productos\" fq-name=\"dhwheels.carrito_productos\" order=\"2\" x=\"1155\" y=\"171\"><path name=\"dhwheels\"/></entity><entity id=\"4\" name=\"carrito_facturas\" fq-name=\"dhwheels.carrito_facturas\" order=\"3\" x=\"820\" y=\"286\"><path name=\"dhwheels\"/></entity><entity id=\"5\" name=\"carrito_estado\" fq-name=\"dhwheels.carrito_estado\" order=\"4\" x=\"978\" y=\"292\"><path name=\"dhwheels\"/></entity><entity id=\"6\" name=\"autos\" fq-name=\"dhwheels.autos\" order=\"5\" x=\"144\" y=\"24\"><path name=\"dhwheels\"/></entity><entity id=\"7\" name=\"imagenes\" fq-name=\"dhwheels.imagenes\" order=\"6\" x=\"76\" y=\"321\"><path name=\"dhwheels\"/></entity><entity id=\"8\" name=\"usuarios_autos\" fq-name=\"dhwheels.usuarios_autos\" order=\"7\" x=\"424\" y=\"249\"><path name=\"dhwheels\"/></entity><entity id=\"9\" name=\"tipo_combustible\" fq-name=\"dhwheels.tipo_combustible\" order=\"8\" x=\"348\" y=\"397\"><path name=\"dhwheels\"/></entity><entity id=\"10\" name=\"marcas\" fq-name=\"dhwheels.marcas\" order=\"9\" x=\"401\" y=\"23\"><path name=\"dhwheels\"/></entity></data-source></entities><relations><relation name=\"carrito_FK\" fq-name=\"dhwheels.carrito.carrito_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"1\"/><relation name=\"user_autos_FK_1\" fq-name=\"dhwheels.usuarios_autos.user_autos_FK_1\" type=\"fk\" pk-ref=\"2\" fk-ref=\"8\"/><relation name=\"carrito_FK_1\" fq-name=\"dhwheels.carrito.carrito_FK_1\" type=\"fk\" pk-ref=\"3\" fk-ref=\"1\"/><relation name=\"carrito_FK_2\" fq-name=\"dhwheels.carrito.carrito_FK_2\" type=\"fk\" pk-ref=\"4\" fk-ref=\"1\"/><relation name=\"carrito_FK_3\" fq-name=\"dhwheels.carrito.carrito_FK_3\" type=\"fk\" pk-ref=\"5\" fk-ref=\"1\"/><relation name=\"imagenes_FK\" fq-name=\"dhwheels.imagenes.imagenes_FK\" type=\"fk\" pk-ref=\"6\" fk-ref=\"7\"/><relation name=\"usuarios_autos_FK\" fq-name=\"dhwheels.usuarios_autos.usuarios_autos_FK\" type=\"fk\" pk-ref=\"6\" fk-ref=\"8\"/><relation name=\"modelo_FK\" fq-name=\"dhwheels.autos.modelo_FK\" type=\"fk\" pk-ref=\"9\" fk-ref=\"6\"/><relation name=\"marca_FK\" fq-name=\"dhwheels.autos.marca_FK\" type=\"fk\" pk-ref=\"10\" fk-ref=\"6\"/></relations></diagram>"
+						}
+					}
+				},
+				":marcas": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201102348\"><entities><data-source id=\"mysql8-17e386fb2e6-66f7b06f14a32a38\"><entity id=\"1\" name=\"marcas\" fq-name=\"dhwheels.marcas\" order=\"0\" color-bg=\"255,128,64\" x=\"344\" y=\"381\"><path name=\"dhwheels\"/></entity><entity id=\"2\" name=\"autos\" fq-name=\"dhwheels.autos\" order=\"1\" x=\"335\" y=\"13\"><path name=\"dhwheels\"/></entity><entity id=\"3\" name=\"cilindrada\" fq-name=\"dhwheels.cilindrada\" order=\"2\" x=\"45\" y=\"206\"><path name=\"dhwheels\"/></entity><entity id=\"4\" name=\"tipo_combustible\" fq-name=\"dhwheels.tipo_combustible\" order=\"3\" x=\"158\" y=\"361\"><path name=\"dhwheels\"/></entity><entity id=\"5\" name=\"usuario\" fq-name=\"dhwheels.usuario\" order=\"4\" x=\"798\" y=\"7\"><path name=\"dhwheels\"/></entity><entity id=\"6\" name=\"usuarios_autos\" fq-name=\"dhwheels.usuarios_autos\" order=\"5\" x=\"609\" y=\"164\"><path name=\"dhwheels\"/></entity><entity id=\"7\" name=\"carrito\" fq-name=\"dhwheels.carrito\" order=\"6\" x=\"1128\" y=\"56\"><path name=\"dhwheels\"/></entity><entity id=\"8\" name=\"imagenes\" fq-name=\"dhwheels.imagenes\" order=\"7\" x=\"641\" y=\"422\"><path name=\"dhwheels\"/></entity><entity id=\"9\" name=\"carrito_productos\" fq-name=\"dhwheels.carrito_productos\" order=\"8\" x=\"1322\" y=\"309\"><path name=\"dhwheels\"/></entity><entity id=\"10\" name=\"carrito_estado\" fq-name=\"dhwheels.carrito_estado\" order=\"9\" x=\"1166\" y=\"412\"><path name=\"dhwheels\"/></entity><entity id=\"11\" name=\"carrito_facturas\" fq-name=\"dhwheels.carrito_facturas\" order=\"10\" x=\"888\" y=\"371\"><path name=\"dhwheels\"/></entity></data-source></entities><relations><relation name=\"marca_FK\" fq-name=\"dhwheels.autos.marca_FK\" type=\"fk\" pk-ref=\"1\" fk-ref=\"2\"/><relation name=\"usuarios_autos_FK\" fq-name=\"dhwheels.usuarios_autos.usuarios_autos_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"6\"/><relation name=\"imagenes_FK\" fq-name=\"dhwheels.imagenes.imagenes_FK\" type=\"fk\" pk-ref=\"2\" fk-ref=\"8\"/><relation name=\"CILINDRADA_FK\" fq-name=\"dhwheels.autos.CILINDRADA_FK\" type=\"fk\" pk-ref=\"3\" fk-ref=\"2\"/><relation name=\"modelo_FK\" fq-name=\"dhwheels.autos.modelo_FK\" type=\"fk\" pk-ref=\"4\" fk-ref=\"2\"/><relation name=\"user_autos_FK_1\" fq-name=\"dhwheels.usuarios_autos.user_autos_FK_1\" type=\"fk\" pk-ref=\"5\" fk-ref=\"6\"/><relation name=\"carrito_FK\" fq-name=\"dhwheels.carrito.carrito_FK\" type=\"fk\" pk-ref=\"5\" fk-ref=\"7\"/><relation name=\"marcas_FK\" fq-name=\"dhwheels.marcas.marcas_FK\" type=\"fk\" pk-ref=\"8\" fk-ref=\"1\"/><relation name=\"carrito_FK_1\" fq-name=\"dhwheels.carrito.carrito_FK_1\" type=\"fk\" pk-ref=\"9\" fk-ref=\"7\"/><relation name=\"carrito_FK_3\" fq-name=\"dhwheels.carrito.carrito_FK_3\" type=\"fk\" pk-ref=\"10\" fk-ref=\"7\"/><relation name=\"carrito_FK_2\" fq-name=\"dhwheels.carrito.carrito_FK_2\" type=\"fk\" pk-ref=\"11\" fk-ref=\"7\"/></relations></diagram>"
+						}
+					}
+				}
+			},
+			"tarea_individual": {
+				":usuarios": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "<diagram version=\"1\" name=\"empty\" time=\"202201111749\"><entities><data-source id=\"mysql8-17e386fb2e6-66f7b06f14a32a38\"><entity id=\"1\" name=\"usuarios\" fq-name=\"tarea_individual.usuarios\" order=\"0\" color-bg=\"255,128,64\" border-width=\"3\" x=\"342\" y=\"78\"><path name=\"tarea_individual\"/></entity></data-source></entities><relations/></diagram>"
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

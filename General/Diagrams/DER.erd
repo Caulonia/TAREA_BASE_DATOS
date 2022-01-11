@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="DER">
+	<entities>
+		<data-source id="mysql8-17e386fb2e6-66f7b06f14a32a38">
+			<entity id="1" name="categorias" fq-name="tarea_individual.categorias">
+				<path name="tarea_individual"/>
+			</entity>
+			<entity id="2" name="estados" fq-name="tarea_individual.estados">
+				<path name="tarea_individual"/>
+			</entity>
+			<entity id="3" name="notas" fq-name="tarea_individual.notas">
+				<path name="tarea_individual"/>
+			</entity>
+			<entity id="4" name="usuarios" fq-name="tarea_individual.usuarios">
+				<path name="tarea_individual"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="notas_FK" fq-name="tarea_individual.notas.notas_FK" type="fk" pk-ref="1" fk-ref="3"/>
+		<relation name="notas_FK_1" fq-name="tarea_individual.notas.notas_FK_1" type="fk" pk-ref="2" fk-ref="3"/>
+		<relation name="usuarios_FK" fq-name="tarea_individual.usuarios.usuarios_FK" type="fk" pk-ref="3" fk-ref="4"/>
+	</relations>
+</diagram>
